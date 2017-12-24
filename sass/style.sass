@@ -1,0 +1,687 @@
+//@import url('https://fonts.googleapis.com/css?family=Pathway+Gothic+One&subset=latin-ext')
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td
+    margin: 0
+    padding: 0
+    border: 0
+    outline: 0
+    font-weight: inherit
+    font-style: inherit
+    font-size: 14px
+    font-family: inherit
+    vertical-align: top
+    background: transparent
+    font: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif
+
+html
+    font-size: 100%
+
+body
+    margin: 0
+    padding: 0
+
+*
+    margin: 0
+    padding: 0
+    outline:  none
+
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+// wrapper -------------------------------------------------------------------------------------------------------------
+body
+    font-family: "League Gothic", sans-serif
+a
+    color: #fff
+    font: 14px 'Arial', sans-serif
+
+img
+    border: none
+    vertical-align: middle
+
+
+.clearfix
+    &:before, &:after
+        content: " "
+        display: table
+    &:after
+        clear: both
+
+.relative
+    position: relative
+
+=br($br)
+    -webkit-border-radius: $br
+    -moz-border-radius: $br
+    -o-border-radius: $br
+    border-radius: $br
+=b($px, $color)
+    -webkit-border: $px solid $color
+    -moz-border: $px solid $color
+    -o-border: $px solid $color
+    border: $px solid $color
+
+.container
+    max-width: 960px
+    margin: 0 auto
+
+$title: #076e9f
+$light-blue: #22aaec
+$text: #707070
+
+h1, h2, h3, h4, h5, h6
+    color: $title
+    text-transform: uppercase
+
+h1 span, h2 span, h3 span, h4 span, h5 span, h6 span
+    color: $light-blue
+    text-transform: uppercase
+
+// wrapper end ---------------------------------------------------------------------------------------------------------
+
+// header --------------------------------------------------------------------------------------------------------------
+.header
+    padding-bottom: 11px
+    .logo
+        padding-top: 8px
+    .list-soc
+        position: absolute
+    .list-nav
+        padding-top: 12px
+
+.logo
+    text-align: center
+    &__text
+        font-size: 32px
+
+.list-soc
+    list-style: none
+    top: 16px
+    right: 0
+    &__item
+        display: inline-block
+        margin-right: 7px
+    &__item:last-child
+        margin-right: 0
+
+.list-nav
+    list-style: none
+    text-align: center
+    &__item
+        display: inline-block
+        margin-right: 18px
+        &.active .list-nav__link
+            background: #066396 linear-gradient(#066396, #0879a8)
+            padding: 4px 16px
+            color: #ffffff
+            text-transform: uppercase
+            +b(1px, #045279)
+            +br(1px)
+        &:hover .list-nav__link
+            background: #066396 linear-gradient(#066396, #0879a8)
+            padding: 4px 16px
+            color: #ffffff
+            text-transform: uppercase
+            +b(1px, #045279)
+            +br(1px)
+    &__item:last-child
+        margin-right: 0
+    &__link
+        display: block
+        padding: 5px 17px
+        color: $text
+        font-size: 10px
+        text-decoration: none
+        text-transform: uppercase
+// header end ----------------------------------------------------------------------------------------------------------
+
+// home ----------------------------------------------------------------------------------------------------------------
+.home
+    min-height: 435px
+    &-info
+        padding-top: 91px
+    &-posts
+        position: absolute
+
+.home
+    position: relative
+    border-top: 2px solid #22aaec
+    background:  url(../img/main-img.jpg) no-repeat center bottom
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+
+.home-info
+    text-align: center
+    &__title
+        h1, span
+            font-size: 60px
+        h1
+            display: inline-block
+            background: rgba(255, 255, 255, 0.7)
+            padding: 0 33px
+            line-height: 79px
+    &__text
+        margin-top: 19px
+        h4, span
+            font-size: 30px
+        h4
+            display: inline-block
+            background: rgba(255, 255, 255, 0.7)
+            padding: 0 13px
+            line-height: 47px
+
+.home-posts
+    left: 0
+    right: 0
+    bottom: 0
+    background: rgba(0, 0, 0, 0.6)
+    -moz-transition: all 1s
+    -webkit-transition: all 1s
+    -o-transition: all 1s
+    transition: all 1s
+
+.slick-track
+    height: 70px !important
+
+.slick-slider .slick-list
+    margin-left: 35px!important
+
+.list-posts
+    text-align: center
+    padding: 25px 0
+    &__item
+        position: relative
+        display: inline-block
+        background: rgba(255, 255, 255, 0.9)
+        width: 155px
+        height: 70px
+        margin-right: 80px
+    &__img
+        position: absolute
+        left: -35px
+    &__info
+        width: inherit
+        height: inherit
+        position: relative
+        padding: 10px 5px 7px 49px
+        p
+            font-size: 9px
+            font-family: 'Arial', sans-serif
+            line-height: 13px
+            text-align: left
+            color: #515151
+        p.author
+            position: absolute
+            top: 50px
+            left: 49px
+            color: #828282
+    &__item:last-child
+        margin-right: 0
+
+
+.show-comment
+    display: none
+    width: 30px
+    height: 30px
+    background: #22aaec
+    position: absolute
+    right: 10px
+    bottom: 20px
+    +br(50%)
+    z-index: 3
+    cursor: pointer
+    text-align: center
+    i
+        line-height: 30px
+        text-align: center
+        color: #fff
+.back
+    display: none
+    color: #fff
+    position: absolute
+    right: 10px
+    top: 10px
+    cursor: pointer
+.back.back-head
+    display: block
+    color: #fff
+.back-sidebar
+    color: #22aaec
+// home end ------------------------------------------------------------------------------------------------------------
+
+// content -------------------------------------------------------------------------------------------------------------
+.padding-top
+    padding-top: 20px
+
+
+a.like, a.com
+    text-decoration: none
+    color: #076e9f
+    font-size: 10px
+    margin-left: 13px
+    line-height: 26px
+
+a.like:before
+    content: url(../img/thumb-up.png)
+    margin-right: 10px
+    width: 16px
+    height: 17px
+    position: relative
+    top: 3px
+a.com:before
+    content: url(../img/speech-bubbles.png)
+    margin-right: 10px
+    width: 16px
+    height: 17px
+    position: relative
+    top: 6px
+
+
+p.date
+    color: #878787
+
+.post-like, .post-com
+    font-size: 10px
+    font-weight: bold
+    color: $title
+    text-decoration: none
+    line-height: 30px
+    float: right
+    margin-right: 14px
+.post-like:before
+    content: url(../img/post-like.png)
+    margin-right: 4px
+    position: relative
+    top: 3px
+    height: 16px
+    width: 17px
+    display: inline-block
+.post-com:before
+    content: url(../img/post-com.png)
+    margin-right: 4px
+    position: relative
+    top: 6px
+    height: 16px
+    width: 17px
+    display: inline-block
+
+
+
+.bb
+    border-bottom: 1px dotted #d5d5d5
+
+.content
+    display: flex
+    justify-content: space-between
+    &-sidebar
+        flex: 196
+    &-main
+        flex: 755
+    &-footer
+        padding: 11px 0
+    p
+        font-size: 10px
+        color: #5c5c5c
+        font-family: 'Arial', sans-serif
+        line-height: 15px
+
+.content-sidebar
+    padding: 15px  0 0 5px
+    -webkit-transition: left 1s ease-out 0.5s
+    -moz-transition: left 1s ease-out 0.5s
+    -o-transition: left 1s ease-out 0.5s
+    transition: left 1s ease-out 0.5s
+    border-right: 1px dotted #d5d5d5
+    border-top: 2px solid #22aaec
+    &__box
+        padding: 16px 20px 16px 0
+        border-bottom: 1px dotted #d5d5d5
+    &__box.related
+        padding: 10px 20px 25px 0
+    &__box.currency
+        padding: 17px 20px 0 0
+    &__box:last-child
+        border-bottom: none
+
+.sidebar-title, .additional-posts__title
+    font-size: 22px
+
+    color: $title
+
+.author-name
+    color: $title
+    font-size: 10px
+    font-weight: bold
+
+.sidebar-posts
+    margin-top: 16px
+    position: relative
+    &__item
+        display: flex
+        justify-content: space-between
+        margin-bottom: 10px
+    &__img
+        flex: 50
+    &__info
+        flex: 130
+        padding-left: 19px
+        a
+            color: #5c5c5c
+            text-decoration: none
+            font-size: 10px
+            font-style: italic
+        a:before
+            content: url(../img/comments.png)
+            position: relative
+            margin-right: 6px
+        p
+            text-transform: uppercase
+            padding: 3px 0
+            font-weight: bold
+            font-family: 'Arial', sans-serif
+    &__item:last-child
+        margin-bottom: 0
+
+table
+    margin: 8px 0 0 0
+    tr:first-child
+        th
+            color: #ffffff
+            background: #076e9f
+            padding: 4px 8px
+            font-size: 10px
+            font-family: 'Arial', sans-serif
+    tr:nth-child(1n)
+        background: #b1e1f8
+        td
+            color: #2277a5
+            padding: 3px 8px
+            font-weight: bold
+            font-size: 10px
+            font-family: 'Arial', sans-serif
+            img
+                display: block
+                margin: 0 auto
+    tr:nth-child(2n)
+        background: #c7e9fa
+        td
+            color: #2277a5
+            font-size: 10px
+            padding: 3px 8px
+            font-weight: bold
+            font-family: 'Arial', sans-serif
+
+.content-main
+    position: relative
+    top: -9px
+    border-top: 2px solid #22aaec
+    margin-bottom: 25px
+    .main-post
+        padding: 22px 30px 18px 13px
+        border-bottom: 1px dotted #d5d5d5
+        border-right: 1px dotted #d5d5d5
+        background: #fff
+
+.main-title
+    color: $title
+    font-size: 32px
+    padding-bottom: 13px
+
+.main-info
+    display: flex
+    justify-content: space-between
+    &__img
+        flex: 120
+    &__text
+        flex: 590
+        padding-left: 16px
+    .btn
+        text-decoration: none
+        color: #ffffff
+        padding: 7px 11px
+        background: #0E8BB8 linear-gradient(#0883b1, #045279)
+        +b(1px, #045279)
+        font-weight: bold
+        font-size: 10px
+        display: inline-block
+        margin-top: 34px
+        border-bottom: 2px solid #d6d6d6
+        cursor: pointer
+    .btn:active
+        background: #0E8BB8 linear-gradient(#045279, #0883b1)
+
+.hide-text, .hide-text-post
+    overflow: hidden
+
+.user-photo
+    list-style: none
+    &__item
+        display: inline-block
+        margin-right: 10px
+    &__item:last-child
+        margin-right: 0
+
+.user-like
+    background: url(../img/footer-post-meta-bg.png) no-repeat
+    width: 180px
+    height: 32px
+    position: absolute
+    right: -5px
+    bottom: 16px
+
+.additional-posts
+    padding: 19px 0 0 13px
+    .post
+        float: left
+        width: 363px
+        min-height: 214px
+        position: relative
+        background: #eaeaea
+        border-top-left-radius: 20px
+        margin: 0 14px 20px 0
+        p
+            font-size: 10px
+            color: #5c5c5c
+            font-family: 'Arial', sans-serif
+            line-height: 15px
+        h5
+            padding-bottom: 2px
+        span
+            color: $title
+            font-size: 10px
+            font-weight: bold
+        &-top
+            min-height: 184px
+            padding: 22px 22px 37px 30px
+            button.more
+                text-decoration: none
+                font-size: 10px
+                color: $title
+                font-weight: bold
+                margin-top: 3px
+                display: inline-block
+                background: none
+                border: none
+                cursor: pointer
+            p.text
+                padding-top: 12px
+        &-bottom
+            background: #f4f3f3
+            position: absolute
+            right: 0
+            left: 0
+            bottom: 0
+    .post:nth-child(even)
+        margin-right: 0
+
+
+.post:before,
+.post:after
+    z-index: -1
+    position: absolute
+    content: ""
+    bottom: 17px
+    left: 8px
+    width: 50%
+    top: 80%
+    max-width: 300px
+    background: rgba(0, 0, 0, 0.7)
+    -webkit-box-shadow: 0 15px 10px rgba(0,0,0, 0.7)
+    -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7)
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7)
+    -webkit-transform: rotate(-2deg)
+    -moz-transform: rotate(-2deg)
+    -o-transform: rotate(-2deg)
+    -ms-transform: rotate(-2deg)
+    transform: rotate(-2deg)
+.post:after
+    -webkit-transform: rotate(2deg)
+    -moz-transform: rotate(2deg)
+    -o-transform: rotate(2deg)
+    -ms-transform: rotate(2deg)
+    transform: rotate(2deg)
+    right: 8px
+    left: auto
+
+.add-post
+    padding-left: 13px
+    padding-top: 9px
+    position: relative
+    .new-post
+        background: #e8e7e7 linear-gradient(#e8e7e7, #f4f3f3)
+        width: 100%
+        height: 80px
+        cursor: pointer
+        p
+            font-size: 12px
+            color: #5c5c5c
+            font-family: 'Arial', sans-serif
+            text-align: center
+            font-weight: bold
+            text-decoration: none
+            line-height: 80px
+
+.add-post:before,
+.add-post:after
+    z-index: -1
+    position: absolute
+    content: ""
+    bottom: 17px
+    left: 20px
+    width: 50%
+    top: 70%
+    max-width: 300px
+    background: rgba(0, 0, 0, 0.7)
+    -webkit-box-shadow: 0 15px 10px rgba(0,0,0, 0.7)
+    -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7)
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7)
+    -webkit-transform: rotate(-2deg)
+    -moz-transform: rotate(-2deg)
+    -o-transform: rotate(-2deg)
+    -ms-transform: rotate(-2deg)
+    transform: rotate(-2deg)
+.add-post:after
+    -webkit-transform: rotate(2deg)
+    -moz-transform: rotate(2deg)
+    -o-transform: rotate(2deg)
+    -ms-transform: rotate(2deg)
+    transform: rotate(2deg)
+    right: 8px
+    left: auto
+
+.content-footer__title
+    color: $title
+    font-size: 32px
+
+
+.show-sidebar
+    display: none
+    width: 25px
+    height: 25px
+    background: #22aaec
+    position: absolute
+    top: -6px
+    left: 28px
+    +br(50%)
+    z-index: 2
+    cursor: pointer
+    text-align: center
+    i
+        line-height: 25px
+        text-align: center
+        color: #fff
+
+// content end ---------------------------------------------------------------------------------------------------------
+
+// map -----------------------------------------------------------------------------------------------------------------
+.contact
+    height: 200px
+    border-top: 1px solid #bfbfbf
+    border-bottom: 1px solid #bfbfbf
+    #map
+        width: inherit
+        height: inherit
+// map end -------------------------------------------------------------------------------------------------------------
+
+// footer --------------------------------------------------------------------------------------------------------------
+.footer
+    padding: 15px 0 10px 0
+    &-top
+        padding-bottom: 13px
+    &-bottom
+        padding-top: 9px
+
+.footer-top
+    border-bottom: 1px dotted #d5d5d5
+    .footer-title, span
+        font-size: 16px
+
+.footer-title
+    float: left
+
+.footer-bottom
+    text-align: center
+    p
+        font-size: 10px
+        text-transform: uppercase
+        color: $text
+        font-family: 'Arial', sans-serif
+
+.footer-nav
+    list-style: none
+    float: right
+    &__item
+        display: inline-block
+    &__item:hover a
+        color: #ffffff
+        text-transform: uppercase
+        background: #0774a4
+        +b(1px, #045279)
+        +br(1px)
+        padding: 4px 16px
+    &__item.active .footer-nav__link
+        color: #ffffff
+        text-transform: uppercase
+        background: #0774a4
+        +b(1px, #045279)
+        +br(1px)
+        padding: 4px 16px
+    &__item:last-child
+        margin-right: 0
+    &__link
+        padding: 5px 17px
+        text-decoration: none
+        font-size: 10px
+        color: $text
+        text-transform: uppercase
+        line-height: 16px
+// footer end ----------------------------------------------------------------------------------------------------------
